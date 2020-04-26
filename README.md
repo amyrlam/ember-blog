@@ -1,4 +1,4 @@
-# Ember Website
+# Ember Blog
 
 [![Build Status](https://travis-ci.org/ember-learn/ember-blog.svg?branch=master)](https://travis-ci.org/ember-learn/ember-blog)
 <a href="https://discord.gg/emberjs"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Chat"></a>
@@ -25,76 +25,59 @@ to propose changes and iterate on ideas before investing time in coding.
 Some tips for working with git/GitHub can be found in
 [Making your first pull request](https://github.com/ember-learn/guides-source/blob/master/CONTRIBUTING.md#making-your-first-pull-request) in the Guides respository.
 
-To contribute to the Ember Times, a blog newsletter with weekly updates from the Ember land, please refer to this [Contributing Guide](https://github.com/ember-learn/ember-blog/blob/master/source/CONTRIBUTING.md).
-
 ### Contributing troubleshooting
 
-We are using [Alex](https://github.com/wooorm/alex) for insensitive language checking and [markdownlint](https://github.com/DavidAnson/markdownlint). If your CI branch build is failing from these linters, please see [Contributing Guide](https://github.com/ember-learn/ember-blog/blob/master/source/CONTRIBUTING.md) for more info. 
+We are using [Alex](https://github.com/wooorm/alex) for insensitive language checking and [markdownlint](https://github.com/DavidAnson/markdownlint). If your CI branch build is failing from these linters, please see [Contributing Guide](https://github.com/ember-learn/ember-blog/blob/master/source/CONTRIBUTING.md) for more info.
 
+## Prerequisites
 
-## Running locally with Docker (recommended)
+You will need the following things properly installed on your computer.
 
-This is the recommended method to run the website app locally.
-Although the website is built with Ruby, most work is done in Markdown files.
-You don't need to know Ruby or install its dependencies to help out. Follow
-the Docker container instructions below to install and run locally.
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with npm)
+* [Ember CLI](https://ember-cli.com/)
+* [Google Chrome](https://google.com/chrome/)
 
-First, install [Docker and Compose](https://store.docker.com/search?offering=community&type=edition) and leave it running.
+## Installation
 
-Next, the commands below will install all necessary dependencies for the website
-app and start a server. This will take a little while to run,
-possibly a few minutes. The dependencies will be installed inside a Docker
-container, and do not affect your normal developer environment.
+* `git clone <repository-url>` this repository
+* `cd ember-blog`
+* `npm install`
 
-```sh
-git clone git://github.com/emberjs/website.git
-cd website
-docker-compose build
-docker-compose up
-```
+## Running / Development
 
-Subsequent runs will be much faster once all the dependencies are installed.
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-You can view the site locally at [http://localhost:4567](http://localhost:4567)
+### Code Generators
 
-## Running locally with Ruby and Middleman
+Make use of the many generators for code, try `ember help generate` for more details
 
-If you are unable to use Docker as described above, here's how to get started
-installing dependencies.
+### Running Tests
 
-``` sh
-git clone https://github.com/ember-learn/ember-blog.git
-cd ember-blog
-bundle
-bundle exec middleman
-```
+* `ember test`
+* `ember test --server`
 
-Then visit [http://localhost:4567/](http://localhost:4567/)
+### Linting
 
-### Requirements
+* `npm run lint:hbs`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
-If the `bundle` command is not found, you can install it with `gem install bundler`.
+### Building
 
-If the `bundle` command fails to run, you may need to upgrade your Ruby version. Please check the current supported version that described at [.ruby-version](https://github.com/emberjs/website/blob/master/.ruby-version).
-You can use [RVM](https://rvm.io/) to install it:
+* `ember build` (development)
+* `ember build --environment production` (production)
 
-``` sh
-curl -L https://get.rvm.io | bash -s stable
-rvm install $(cat .ruby-version)
-rvm use $(cat .ruby-version)
-```
+### Deploying
 
-### Troubleshooting tips for Windows devs
+Specify what it takes to deploy your app.
 
-For Windows developers using [RubyInstaller](http://rubyinstaller.org/), you'll need to [download the DevKit](http://rubyinstaller.org/downloads) and install it using instructions:
-<https://github.com/oneclick/rubyinstaller/wiki/Development-Kit>
+## Further Reading / Useful Links
 
-After you have a proper install, you can then run:
-
-``` sh
-gem install bundler wdm tzinfo-data
-gem update listen middleman
-```
-
-Once Middleman comes up, you'll be prompted by Windows Firewall. Click "Allow access" and you'll be in business!
-
+* [ember.js](https://emberjs.com/)
+* [ember-cli](https://ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
