@@ -1,0 +1,5 @@
+---
+name: Adapter
+image: ''
+imageMeta: ''
+---
